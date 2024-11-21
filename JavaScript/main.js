@@ -97,3 +97,26 @@ let derivative = x => {
 };
 let xValue = 3;
 console.log(`The value of f'(x) at x = ${xValue} is: ${derivative(xValue)}`);
+
+//7.Write a program to check two numbers and return if one of the number is 100 or if the sum of the two numbers is 100;
+
+let checkNumbers = function (numb1, numb2) {
+    if (numb1 === 100 || numb2 === 100) {
+        return `One of the numbers is 100.`;
+    } else if (numb1 + numb2 === 100) {
+        return `The sum of the numbers is 100.`;
+    } else {
+        return `Neither condition is met.`;
+    }
+};
+
+console.log(checkNumbers(50, 50)); 
+console.log(checkNumbers(100, 20)); 
+console.log(checkNumbers(30, 40)); 
+
+//8.Write a Program To get the extension of a filname;
+const getFileExt = (str) => str.slice(str.lastIndexOf('.'));
+
+console.log(getFileExt('index.html'));
+console.log(getFileExt('tailwind.css'));
+console.log(getFileExt('document.pdf'))
