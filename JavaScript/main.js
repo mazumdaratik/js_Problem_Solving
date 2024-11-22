@@ -120,3 +120,76 @@ const getFileExt = (str) => str.slice(str.lastIndexOf('.'));
 console.log(getFileExt('index.html'));
 console.log(getFileExt('tailwind.css'));
 console.log(getFileExt('document.pdf'))
+
+//9.Write a program to replace every character in a given string with 
+//the character following it in aplphabet
+function shiftCharacters(str) {
+    let result = ''; 
+
+    for (let char of str) {
+        
+        if (char >= 'a' && char <= 'z') {
+            
+            result += char === 'z' ? 'a' : String.fromCharCode(char.charCodeAt(0) + 1);
+        } else if (char >= 'A' && char <= 'Z') {
+            
+            result += char === 'Z' ? 'A' : String.fromCharCode(char.charCodeAt(0) + 1);
+        } else {
+            
+            result += char;
+        }
+    }
+
+    return result;
+}
+
+// Test cases
+console.log(shiftCharacters("abcd")); 
+console.log(shiftCharacters("XYZ"));
+
+//9.1 Alternative 
+const moveCharForward = (str) => str.split('').map(char => String.fromCharCode(char.charCodeAt(0) + 1)).join('');
+
+console.log(moveCharForward('atik'));
+
+//10. How to calculate the Square Root of a number?
+let a = //prompt('Enter the number:')
+let b = Math.sqrt(a);
+console.log(b);
+//10.1
+let findSquareRoot = (number) => {
+    if (number < 0) {
+        return `Negative number is not a real number.`
+    } else {
+        return Math.sqrt(number);
+    }
+}
+
+console.log(findSquareRoot(4));
+
+//11.Calculate th Area of a triangle
+//first thoughts
+let base = prompt('Enter the base:');
+let height = prompt('Enter the height:');
+let area = (base * height) /  2;
+console.log(area);
+//11.
+let b = prompt('Enter the base:');
+let h = prompt('Enter the height:');
+let c = Number(b);
+let d =Number(h);
+let calArea = function (c,d) {
+    return 0.5*c*d;
+}
+console.log(`The area of the triangle is: ${calArea(c, d)}`);
+
+//12.Swap two variable using temporary variable & without temporary variable
+// let x = 5;
+// let y = 10;
+//       //using temporary variable
+// let temp = x;
+// let x = y;
+// let y = temp;
+// console.log(`Swapped variable of a  is ${b} and Swapped variable of a  is ${a} `);
+
+
