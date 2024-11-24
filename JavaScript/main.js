@@ -224,3 +224,28 @@ console.log("Your OTP is:  " + Math.floor(otp));
 let m = 5;
 var eveodd = m % 2 == 0 ? "Even" : "Odd";
 console.log (`${m} is an ${eveodd} Number.`);
+
+//17.Write a program to Check if a Number is a Prime Number
+let primeNumber = prime => {
+    if (prime % 1 === 0 && prime % prime) {
+        return `${prime} is a Prime Number.`;
+    } else {
+       return `${prime} is not a Prime Number.`;
+    }
+}
+console.log(primeNumber(7));
+//17.1-----
+let primeNumbers = (prime) => {
+    if (prime <= 1) {
+        return `${prime} is not a Prime Number.`;
+    }
+
+    for (let i = 2; i <= Math.sqrt(prime); i++) {
+        if (prime % i === 0) {
+            return `${prime} is not a Prime Number.`;
+        }
+    }
+
+    return `${prime} is a Prime Number.`;
+};
+console.log(primeNumbers(1)); 
