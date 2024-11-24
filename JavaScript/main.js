@@ -153,7 +153,7 @@ const moveCharForward = (str) => str.split('').map(char => String.fromCharCode(c
 console.log(moveCharForward('atik'));
 
 //10. How to calculate the Square Root of a number?
-let a = //prompt('Enter the number:')
+let a = prompt('Enter the number:')
 let b = Math.sqrt(a);
 console.log(b);
 //10.1
@@ -174,7 +174,7 @@ let height = prompt('Enter the height:');
 let area = (base * height) /  2;
 console.log(area);
 //11.
-let b = prompt('Enter the base:');
+let  = prompt('Enter the base:');
 let h = prompt('Enter the height:');
 let c = Number(b);
 let d =Number(h);
@@ -184,12 +184,43 @@ let calArea = function (c,d) {
 console.log(`The area of the triangle is: ${calArea(c, d)}`);
 
 //12.Swap two variable using temporary variable & without temporary variable
-// let x = 5;
-// let y = 10;
-//       //using temporary variable
-// let temp = x;
-// let x = y;
-// let y = temp;
-// console.log(`Swapped variable of a  is ${b} and Swapped variable of a  is ${a} `);
+/* let x = 5;
+let y = 10;
+      //using temporary variable
+let temp = x;
+let x = y;
+let y = temp;
+console.log(`Swapped variable of a  is ${b} and Swapped variable of a  is ${a} `); */
+/* 13.How to convert kms to miles */
+function convert() {
+    var kms = document.getElementById('data').value;
+    const factor = 0.621371;
+    var miles = kms * factor;
+    document.getElementById('result').innerText = `${miles} miles`
+}
+//14. Program to Check if a number is Positive, Negative, or Zero
 
+let pnz = function (val) {
 
+if (val < 0) {
+    console.log(`Given number is Negative`)
+} else if (val > 0) {
+    console.log(`The number is positve.`)
+} else if (val === 0) {
+    console.log(`The number is Zero.`)
+} else {
+    console.log(`Not a number.`)
+}
+}
+pnz(5);
+//15.Create a OTP generator code
+let otp = Math.random();
+console.log("before calculation" +otp);
+otp = otp * 10000;
+console.log("After Calculation" +otp);
+console.log("Your OTP is:  " + Math.floor(otp));
+
+//16 Find out Eve/Odd Number using ternary operator
+let m = 5;
+var eveodd = m % 2 == 0 ? "Even" : "Odd";
+console.log (`${m} is an ${eveodd} Number.`);
