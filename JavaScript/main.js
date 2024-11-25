@@ -249,3 +249,24 @@ let primeNumbers = (prime) => {
     return `${prime} is a Prime Number.`;
 };
 console.log(primeNumbers(1)); 
+//18.Find Factorialof a number
+
+/* let findFactorial = (fact) => {
+    let count = 1;
+    for (let f = 1 ; f <= fact ; f++) {
+     count *= f;
+} return count;
+}
+console.log (findFactorial(5)); */
+//18.1 using recursion
+var numberr = prompt("Enter number to calculate Factorial:")
+var fact = 1;
+function factorial (n) {
+    if (n > numberr) {
+        return;
+    }
+    fact = fact * n;
+    n++;
+    fact(n);
+}
+factorial(1);
