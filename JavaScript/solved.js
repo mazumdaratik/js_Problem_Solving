@@ -75,3 +75,48 @@ let fibonacci = (f) =>{
     return series;
 };
 console.log(fibonacci(10))
+
+//5. Write Program to Check 3 digits Armstrong Number 
+let arm = 153;
+let temp = arm; //temp=> 153
+let sum = 0; // sum => 0
+while (temp>0){ // yes boro
+    let digit = temp%10; //153%10 =>  3(digit)
+    console.log(digit);
+    sum = sum + digit**3; //27
+    console.log(sum);
+    temp = parseInt(temp/10); //15
+    console.log(temp);
+    
+}
+if (sum == arm) {
+    console.log(`${arm} is an Armstrong Number.`)
+} else {
+    console.log(`${arm} is not an Armstrong Number.`)
+}
+//5.1
+let isArmstrong = (num) => {
+    let numStr = num.toString(); 
+    let numDigits = numStr.length;
+    let sum = 0;
+
+    for (let char of numStr) {
+        let digit = parseInt(char);
+        sum += digit ** numDigits;
+    }
+
+    return sum === num
+        ? `${num} is an Armstrong Number.`
+        : `${num} is not an Armstrong Number.`;
+};
+ 
+console.log(isArmstrong(9474)); 
+console.log(isArmstrong(123)); 
+
+//6 Program to Find the Factors of a Number
+let num6 = 10;
+    for (let i = 1 ; i<=num6; i++ ) {
+        if (num6 % i == 0) {
+            console.log(i);
+        }
+    };
