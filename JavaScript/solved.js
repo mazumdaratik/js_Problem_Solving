@@ -148,7 +148,7 @@ let  isPallindrome = function (string) {
 };
 
 console.log(isPallindrome(str));
-
+//8.1
 let input = 'madam';
 
 let len = input.length;
@@ -159,3 +159,9 @@ for(let i=0; i<len/2; i++) {
     }
 }
 console.log(`${input}: ${msg}`);
+//9.Program to Replace Characters of a String
+ 
+let string = "Mr. Red has a red car & a Red Bike";
+let reg = new RegExp('Red','gi');
+let newstring = string.replace(reg, 'Blue');
+console.log(newstring);
