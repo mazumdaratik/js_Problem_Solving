@@ -175,3 +175,9 @@ for (let i = newStrr-1; i>=0; i--) {
 }
 console.log(`${strr} reverse is ${revstr}`)
 
+//11.Program to Convert the First Letter of a String in to Uppercase
+let string1 = 'atik';
+let newstring1 = string1.charAt(0);
+let remain = string1.slice(1);
+let capital = newstring1.toUpperCase() + remain;
+console.log(`${capital}`);
