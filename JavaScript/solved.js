@@ -160,8 +160,18 @@ for(let i=0; i<len/2; i++) {
 }
 console.log(`${input}: ${msg}`);
 //9.Program to Replace Characters of a String
- 
 let string = "Mr. Red has a red car & a Red Bike";
 let reg = new RegExp('Red','gi');
 let newstring = string.replace(reg, 'Blue');
 console.log(newstring);
+
+//10.Program to Reverse a String using for loop
+let strr = 'Atik Mazudar';
+let newStrr = strr.length;
+let revstr = '';
+for (let i = newStrr-1; i>=0; i--) {
+    revstr += (strr[i]);
+
+}
+console.log(`${strr} reverse is ${revstr}`)
+
