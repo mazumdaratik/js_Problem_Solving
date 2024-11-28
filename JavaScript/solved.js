@@ -132,3 +132,30 @@ function natNum(num) {
 }
 var res = natNum(20);
 console.log(res);
+
+//8. Program to Check Palindrome String
+
+let str = 'jahaj';
+
+let  isPallindrome = function (string) {
+    let newStr =string.split('').reverse().join('');
+
+    if (str == newStr) {
+        return `${str} is a pallindrom string.`
+    } else {
+        return `${str} is not a pallindrom string.`
+    }
+};
+
+console.log(isPallindrome(str));
+
+let input = 'madam';
+
+let len = input.length;
+let msg = 'It is Pallindrome.'
+for(let i=0; i<len/2; i++) {
+    if (input[i] != input[len-1-i]) {
+        msg = 'It is not a Pallindrome.'
+    }
+}
+console.log(`${input}: ${msg}`);
