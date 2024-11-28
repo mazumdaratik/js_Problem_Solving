@@ -120,3 +120,15 @@ let num6 = 10;
             console.log(i);
         }
     };
+
+//7.Program to Find Sum of a Natural Numbers using Recursion.
+
+function natNum(num) {
+    if(num>0) {
+        return num + natNum(num-1);
+    } else {
+        return num;
+    }
+}
+var res = natNum(20);
+console.log(res);
