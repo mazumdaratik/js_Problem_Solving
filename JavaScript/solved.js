@@ -210,3 +210,26 @@ for (let k = 0; k < leen; k++) {
     }
 
 }
+//13.1
+let string3 = 'Amar Shonar Bangla'
+let testStart = string3.startsWith('A');
+let testEnd = string3.endsWith('a');
+
+if(testStart ==  true && testEnd == true) {
+    console.log(`${string3} starts with A and ends with a`);
+    } else if(testStart ==  true && testEnd == false) {
+        console.log(`${string3} starts with A`);
+     } else if(testStart ==  false && testEnd == true) {
+        console.log(`${string3}  ends with a`);
+     } else {
+        onsole.log(`${string3} ends with a`);
+     }
+//14.Program to Check whether a String Contains a Substring
+let string4 = 'My name is Atik mazumdar';
+let subString = 'mazumdar';
+
+let test1 =string4.includes(subString);
+console.log(test1);
+
+let test2 = string4.indexOf(subString);
+console.log(test2);
