@@ -181,3 +181,32 @@ let newstring1 = string1.charAt(0);
 let remain = string1.slice(1);
 let capital = newstring1.toUpperCase() + remain;
 console.log(`${capital}`);
+
+//12.Program to Check the Number of Occurrences of a Character in a String
+let charCheck = 'Samiul Haque';
+let letter = "a";
+let ln = charCheck.length;
+// console.log(ln);
+// console.log(newCheck);
+let count = 0;
+
+for (let j = 0; j < ln; j++) {
+     if (charCheck[j] == letter ) {
+        count++;
+     }
+}
+console.log(`${charCheck} => ${letter} => ${count}`);
+
+//13.Program to Check whether a String Starts and Ends with Certain Characters
+
+let string2 = "BanladesB";
+let leen = string2.length;
+for (let k = 0; k < leen; k++) {
+    if (string2[0] === string2[leen-1] ) {
+        console.log('Matched')
+        break;
+    }else {
+        console.log('Not matched')
+    }
+
+}
