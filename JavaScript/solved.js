@@ -233,3 +233,11 @@ console.log(test1);
 
 let test2 = string4.indexOf(subString);
 console.log(test2);
+
+//15.Flatten Array of Arrays
+let arr = [[0,1],[2,3],[4,5]];
+const flattenArray = arr.reduce(
+    (previousvalue, currentValue) => previousvalue.concat(currentValue), []
+);
+
+console.log(flattenArray);
