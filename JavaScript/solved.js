@@ -257,4 +257,42 @@ function isPrime(number) {
     return true; 
 }
 
-console.log(arry.sort((a, b) => a - b).findLast(isPrime)); 
+console.log(arry.sort((a, b) => a - b).findLast(isPrime));
+
+//17. Create 3 function as Enroll, Progress, GetCertificate & use aynchronus callback pattern to call them.
+let paymentSuccess = true;
+let marks = 70;
+function enroll (callback) {
+    console.log("Course Enrollment is in Progress...");
+
+    setTimeout(function() {
+        if(paymentSuccess) {
+            callback();
+        } else {
+            console.log("Payment Failed. Try Again please..");
+        }
+    },2000);
+}
+
+function progress (callback) {
+    console.log("Getting ready courses...");
+
+    setTimeout(function() {
+        if(marks<=70) {
+            callback();
+        } else {
+            console.log("You are not eligible for certificate");
+        }
+    },2000);
+}
+function getCertificate () {
+    console.log("Preaparing Your Certificate...");
+
+    setTimeout(function() { 
+            console.log("Congratulations!! Click here to download.");
+    },2000);
+}
+
+enroll(function() {
+    progress(getCertificate);
+});
