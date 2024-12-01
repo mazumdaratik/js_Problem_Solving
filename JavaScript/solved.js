@@ -241,3 +241,20 @@ const flattenArray = arr.reduce(
 );
 
 console.log(flattenArray);
+
+//16.Find Largest Prime Number in an Array
+
+const arry = [4, 5, 7, 8, 11, 12, 17, 97, 47];
+
+function isPrime(number) {
+    if (number < 2) return false; 
+    if (number === 2) return true; 
+    if (number % 2 === 0) return false; 
+
+    for (let fact = 3; fact <= Math.sqrt(number); fact += 2) {
+        if (number % fact === 0) return false; 
+    }
+    return true; 
+}
+
+console.log(arry.sort((a, b) => a - b).findLast(isPrime)); 
