@@ -296,3 +296,27 @@ function getCertificate () {
 enroll(function() {
     progress(getCertificate);
 });
+
+//18. Find a specific string in a sentence & show how many times it is found
+const sentence = "Bangladesh is development country. Bangladesh got independent in 1971 from Pakistan.";
+
+const matches = sentence.match(/bangladesh/gi);
+console.log(matches);
+const occurances = matches ? matches.length : 0 ;
+console.log(occurances);
+
+let position = sentence.search(/bangladesh/i);
+console.log(position);
+position = position >= 0 ? position : "Not found";
+
+//19.Perform a linearsearch() function in a array
+
+function linearSearch(arr, val) {
+    for(let i =0; i < arr.length;i++) {
+        if (arr[i] === val) {
+            return i;
+        }
+    }
+    return 'Not found';
+}
+console.log(linearSearch(['a', 'b', 'c', 'd', 'c'], 'c'));
