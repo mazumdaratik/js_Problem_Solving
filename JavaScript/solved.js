@@ -320,3 +320,16 @@ function linearSearch(arr, val) {
     return 'Not found';
 }
 console.log(linearSearch(['a', 'b', 'c', 'd', 'c'], 'c'));
+
+//20.How to find largest string from an Array & show its index number.
+
+function longestString (names) {
+    let longestWord = '';
+    for(let name of names) {
+        if(name.length > longestWord.length) {
+            longestWord = name;
+        }
+    }
+    return [longestWord, names.indexOf(longestWord)];
+}
+console.log(['Atik Mazumdar', 'Samiul Haque', 'Rizowan Kabir Khan', 'Riana Azad']);
