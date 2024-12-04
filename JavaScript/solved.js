@@ -333,3 +333,49 @@ function longestString (names) {
     return [longestWord, names.indexOf(longestWord)];
 }
 console.log(['Atik Mazumdar', 'Samiul Haque', 'Rizowan Kabir Khan', 'Riana Azad']);
+
+//21. From 1-100 which numbers are divisible by 3 ,5 & 3 & 5 both.
+
+function fizzBuzz(number) {
+    for(let i=1; i<=number; i++) {
+        if (i%15 === 0) {
+            console.log(`${i} is Fizzbuzz`);
+        } else if(i%3 === 0) {
+            console.log(`${i} is Fizz`); 
+        } else if(i%5 === 0) {
+            console.log(`${i} is Buzz`); 
+        } else {
+            console.log(i);
+        }
+    }
+
+}
+fizzBuzz(50);
+
+//22.How to remove falsy value from an array
+
+const mixedArray = [
+    'Atik',
+    undefined,
+    "JavaScript",
+    false,
+    "",
+    "apple",
+    40,
+    "k",
+    true,
+    "IUBAT_CSE",
+    NaN
+];
+
+const trueArray = mixedArray.filter(function (element) {
+    if(element) {
+        return true;
+    } else {
+        return false;
+    }
+} );
+//Use boolean function
+//const trueArray = mixedArray.filter(Boolean);
+console.log(trueArray);
+
