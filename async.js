@@ -11,7 +11,7 @@ function enroll () {
             }
         },2000);
     })
-   return promise; 
+ return promise; 
 }
 
 function progress () {
@@ -34,10 +34,18 @@ function getCertificate () {
             resolve("Congratulations!! Click here to download.");
     },2000);
     });
- return promise;   
+   return promise;   
 }
 
-enroll()
+async function course (){
+    await enroll();
+    await progress();
+    const message = await getCertificate();
+    console.log(message);
+}
+course();
+
+/* enroll()
     .then(progress)
     .then(getCertificate)
     .then(function(val){
@@ -45,4 +53,4 @@ enroll()
     })
     .catch(function(error){
         console.log(error);
-    })
+    }) */
