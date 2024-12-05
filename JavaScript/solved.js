@@ -379,3 +379,14 @@ const trueArray = mixedArray.filter(function (element) {
 //const trueArray = mixedArray.filter(Boolean);
 console.log(trueArray);
 
+//23.Write a JavaScript Program to get the current date.
+//Expected Output: mm-dd-yyyy, dd-mm-yyyy, dd/mm/yyyy
+
+const formatDate = (date = new Date ()) => {
+
+    const days = date.getDate();
+    const months = date.getMonth() + 1;
+    const years = date.getFullYear();
+    return `${days}-${months}-${years}`;
+}
+console.log(formatDate());
