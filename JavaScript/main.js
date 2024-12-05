@@ -270,3 +270,29 @@ function factorial (n) {
     fact(n);
 }
 factorial(1);
+//19 JavaScript Promises
+
+const statu = false;
+
+console.log('Task 1');
+
+const promise = new Promise(function (resolve,reject){
+
+    setTimeout(function(){
+        if(statu) {
+            resolve('Task 2');
+        } else {
+            reject('failed');
+        }
+    },2000);
+
+});
+promise
+    .then(function(val){
+        console.log(val);
+    })
+    .catch(function(err){
+        console.log(err);
+    });
+
+console.log('Task 3');
