@@ -1,3 +1,4 @@
+
 //1.Program to print the table of any user defined number using function
 function table (num1) {
     for ( let i =1; i<=10; i++) {
@@ -400,3 +401,25 @@ const addNew = (str) =>
     str.indexOf('New!') === 0 ? str : `New! ${str}`;
 
 console.log(addNew('New! Offers'));
+
+//25.Write Program to create new String from a given string
+//taking the first 3 characters and the last 3 chacracters of a string
+//and adding them together. The string length must be 3 or more,
+//if not, rturn the original string.
+
+function createNewString(str) {
+  
+    if (str.length < 3) {
+        return str;
+    }
+    
+    const first = str.slice(0, 3);
+    
+    const last = str.slice(-3);
+    
+    let addthem = first + last;
+    return addthem;
+}
+
+console.log(createNewString("JavaScript"));
+console.log(createNewString("Hi")); 
