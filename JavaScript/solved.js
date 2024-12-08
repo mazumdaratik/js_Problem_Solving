@@ -423,3 +423,21 @@ function createNewString(str) {
 
 console.log(createNewString("JavaScript"));
 console.log(createNewString("Hi")); 
+
+//26. Write a program to extract the first half of a string of even length.
+
+const firstHalf = (str) => str.slice(0, str.length / 2);
+
+console.log(firstHalf('Atikmazumdar'));
+
+//27.write a program to concatenate two strings except their first character
+const concatenate = (str1, str2) =>
+    str1.slice(1) + str2.slice(1);
+
+console.log(concatenate('atik', 'mazumdar'));
+
+//28.given two values, write a program to find out which one is nearest to 100
+
+let near100 = (m,n) => (100 - m) < (100 - n) ? m : n;
+console.log(near100(99, 1));
+console.log(near100(65, 45));
