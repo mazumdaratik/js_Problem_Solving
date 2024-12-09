@@ -441,3 +441,13 @@ console.log(concatenate('atik', 'mazumdar'));
 let near100 = (m,n) => (100 - m) < (100 - n) ? m : n;
 console.log(near100(99, 1));
 console.log(near100(65, 45));
+
+//29.write a program to check a given string contains 2 to 4 occcurences of a specified character
+let countChars = (str,char) =>
+    str.split('').filter(ch => ch === char).length;
+
+let contains2to4 =  (str, char) =>
+    countChars(str, char) >= 2 && countChars(str, char) <=4;
+
+console.log(contains2to4('ooh!','o'));
+console.log(contains2to4('oh!', 'o'));
