@@ -37,7 +37,7 @@ let customers = [
         'age' : 82,
         'married' : true,
         'expense' : 90,
-        'purchased' : ['Book']
+        'purchased' : ['']
     },
     {
         'id': 005,
@@ -102,6 +102,7 @@ const total = customers.reduce( (accumulator, customer, index, array)=>{
 }, 0)
 
 const avgAgeOfCustBookPurchased = Math.floor( total / count);
+
 //console.log(avgAgeOfCustBookPurchased);
 
 const getInfo = customers.some( (customer) => {
@@ -114,6 +115,24 @@ const getCustomer = customers.find( (customer) => { //for index can apply findIn
     return customer.age < 20 
 });
 
-console.log(getCustomer);
+//console.log(getCustomer);
 
-// node array_iterator
+const ZeroShopping = customers.every( (customer) => {
+    return customer?.purchased?.length === 0;
+})
+
+//console.log(ZeroShopping);
+customers.forEach( (customer) => {
+    console.log(customer);
+});
+
+const numbers = [10, 20, 30, 40, 50];
+numbers.entries()
+console.log(numbers);
+for (const [key, value] of numbers.entries()){
+    console.log(key, value);
+}
+
+for (const value of numbers.values()){
+    console.log(value);
+}
