@@ -17,7 +17,7 @@ let customers = [
         'married': true,
         'age' : 64,
         'expense' : 100,
-        'purchased' : ['stick', 'Blade']
+        'purchased' : ['stick', 'Book']
     },
     {
         'id': 003,
@@ -91,6 +91,29 @@ const fullName = customers.map( (fullname)=> {
       
     return fullname; 
 })
-console.log(fullName);
+//console.log(fullName);
+let count = 0;
+const total = customers.reduce( (accumulator, customer, index, array)=>{
+    if(customer?.purchased?.includes('Book')){
+        accumulator += customer.age;
+        count += 1;
+    }
+    return accumulator;
+}, 0)
+
+const avgAgeOfCustBookPurchased = Math.floor( total / count);
+//console.log(avgAgeOfCustBookPurchased);
+
+const getInfo = customers.some( (customer) => {
+    return customer.age < 20 
+});
+
+//console.log(getInfo);
+
+const getCustomer = customers.find( (customer) => { //for index can apply findIndex() , findLastIndex()
+    return customer.age < 20 
+});
+
+console.log(getCustomer);
 
 // node array_iterator
