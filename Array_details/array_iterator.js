@@ -136,3 +136,31 @@ for (const [key, value] of numbers.entries()){
 for (const value of numbers.values()){
     console.log(value);
 }
+
+// let odds = [1, 3, 5, 7, 9];
+// let oddDoubled = odds.map(number => [number*2]);
+// console.log(oddDoubled);
+
+let odds = [1, 3, 5, 7, 9];
+let oddDoubled = odds.flatMap(number => [number*2]);
+console.log(oddDoubled);
+
+// reduceRight
+// let even = [100, 40, 15];
+// even.reduce( (sub, current) => {
+//     return sub - current;
+// }) //45 
+
+let even = [100, 40, 15];
+even.reduceRight( (sub, current) => {
+    return sub - current;
+}); //-125
+
+const totalExpense = 
+        customers
+            .filter( customer => customer.married)
+            .map( married => married.expense)
+            .reduce( (accuum, expense) => accuum + expense);
+
+    console.log(totalExpense);        
+
