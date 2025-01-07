@@ -55,3 +55,18 @@ for(let i =0; i < 3; i++){
 };
 
 console.log(i);
+
+//--------------
+
+function outerFunction(x){
+    console.log('This is outer function')
+
+    function innerFunction(){
+        console.log('This is inner function');
+        return x * 5;
+    }
+    return innerFunction;
+}
+outerFunction(4);
+let result = outerFunction(4);
+result(4);
