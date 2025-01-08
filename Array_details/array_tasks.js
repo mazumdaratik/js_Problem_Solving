@@ -75,3 +75,38 @@ const lastHrEmployee = hrEmployees[hrEmployees.length - 1];
 
 //console.log("Last Employee in HR:", lastHrEmployee);
 
+//  T-031: Find the first employee in the "Marketing" department.
+
+//  T-032: Check if all employees earn more than 4000.
+
+//  T-033: Find the last employee in the "HR" department.
+
+//  T-034: Verify if all employees belong to a department listed in the departments array.
+
+//  T-035: Log each employee's name and department name to the console.
+
+//  T-036: Extract all employee skill names into a single array.
+
+//  T-037: Increment each employee's salary by 10%
+
+//  T-038: Assume each employee can have multiple skills. Create an array of employee skills and flatten them. Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
+
+//  T-039: Find the total salary of all employees working in the "Engineering" department.
+
+//  T-040: Check if there is any department where all employees earn more than 5000.
+
+//  T-041: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }). Find the total number of unique projects being handled across all employees.
+
+//  T-042: For each employee, find their department name and return an array of employee names with their department names.
+
+//  T-043: Get a list of names of employees earning more than 6000.
+
+//  T-044: Write a for-of loop to print the names of all employees from the employees array.
+
+//  T-045: Using a for-of loop, print the names of employees earning more than 5000.
+
+//  T-046: Modify the for-of loop to destructure each employee object and log their name and salary.
+
+//  T-047: Write a for-of loop to match employees with their departments and print the results.
+
+//  T-048: Use Array.prototype.entries() with a for-of loop to print the index and name of each employee.

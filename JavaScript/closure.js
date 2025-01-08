@@ -1,4 +1,5 @@
 function bankAccount(initialBalance){
+    
     var balance = initialBalance;
     return function(){
         return balance;
@@ -7,6 +8,7 @@ function bankAccount(initialBalance){
 
 var account = bankAccount(100000);
 console.dir(account);
+
 
 (function() {
     var num1 = 2;
