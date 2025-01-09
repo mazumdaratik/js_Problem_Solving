@@ -60,14 +60,19 @@ const totalSalary = employees.reduce( (total, employee) => {
 }, 0)
 //console.log(totalSalary);
 //  T-028: Is there any employee earning less than 5000?
-const lessEarner = employees.filter( employee => employee.salary < 5000 )
+const lessEarner = employees
+    .filter( employee => employee.salary < 5000 )
 //console.log(lessEarner);
 //  T-029: Find the first employee who earns exactly 5100.
-const exactSalary = employees.find(employee => employee.salary === 5100);
+const exactSalary = employees
+    .find(employee => employee.salary === 5100);
 //console.log(exactSalary);
 //  T-030: Find the last employee in the "HR" department.
-const hrEmployees = employees.filter(employee => {
-  const department = departments.find(dept => dept.id === employee.departmentId);
+const hrEmployees = employees
+    .filter(employee => {
+  const department = departments
+    .find(dept => dept.id === employee.departmentId);
+
   return department && department.name === "HR";
 });
 
@@ -76,14 +81,40 @@ const lastHrEmployee = hrEmployees[hrEmployees.length - 1];
 //console.log("Last Employee in HR:", lastHrEmployee);
 
 //  T-031: Find the first employee in the "Marketing" department.
+const firstMarketingEmployee = employees
+.find(employee => {
+  const department = departments
+  .find(dept => dept.id === employee.departmentId);
+
+  return department && department.name === "Marketing";
+});
+
+//console.log(firstMarketingEmployee);
 
 //  T-032: Check if all employees earn more than 4000.
-
+const checkIncome = employees
+    .every( check => check.salary > 4000);
+//console.log(checkIncome);
 //  T-033: Find the last employee in the "HR" department.
+const lastHREmployee = employees
+  .filter(employee => employee.departmentId === 1)
+  .at(-1);
+
+//console.log(lastHREmployee);
 
 //  T-034: Verify if all employees belong to a department listed in the departments array.
+const allEmployeesDepartments = employees.every(employee => 
+  departments.some(department => department.id === employee.departmentId)
+);
+
+console.log(allEmployeesDepartments);
 
 //  T-035: Log each employee's name and department name to the console.
+employees.forEach(employee => {
+  const department = departments
+  .find(dept => dept.id === employee.departmentId);
+  console.log(`${employee.name} (${department ? department.name : "Unknown"})`);
+});
 
 //  T-036: Extract all employee skill names into a single array.
 
