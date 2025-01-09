@@ -20,7 +20,6 @@ printName.call(mash, v1, v2, v3);
 
 
 //implicit binding
-
 /* var Person = function (name , age){
     return {
         name: name,
@@ -89,3 +88,26 @@ tamim.printPalyerName(); */
 // }
 
 // sakib.printPalyerName();
+
+//new binding
+
+function Player (name, age){
+    //let this = Object.create(null);
+    this.name = name;
+    this.age = age;
+    console.log(`${this.name} is ${this.age} Years old.`)
+}
+
+var liton = new Player("Liton", 30);
+
+//window binding
+
+var printName = function (){
+    console.log(window === this);
+    console.log(this.name);
+};
+
+var sakib = {
+    name: "Sakib"
+};
+printName();
