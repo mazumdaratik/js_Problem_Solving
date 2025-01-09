@@ -1,8 +1,11 @@
 function countVowelsandConsonants(str){
-let countVowels = 0;
-let countConsonants = 0;
-let vowels = 'aeiou';
-let consonants = 'bcdfghjklmnpqrstvwxyz';
+    str = str.toLowerCase();
+    str = str.replace(/ /g, '');
+
+    let countVowels = 0;
+    let countConsonants = 0;
+    let vowels = 'aeiou';
+    let consonants = 'bcdfghjklmnpqrstvwxyz';
 
 for (let i = 0; i <= str.length; i++){
     if(vowels.includes(str[i])){
