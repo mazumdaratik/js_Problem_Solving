@@ -13,3 +13,11 @@ function mulTable(tableOf, upTo){
     
 }
 mulTable(4, 10);
+
+function mulTable(number) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${number} x ${i} = ${number * i}`);
+    }
+}
+
+mulTable(5); 
