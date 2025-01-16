@@ -28,6 +28,7 @@ function areAnagrams(str1, str2){
         }
 
         charSet2[char] = charSet2[char] + 1;
+//      charSet2[char] = (charSet2[char] || 0) + 1;        
     }
     for(let key in charSet1){
  //       console.log(key);
