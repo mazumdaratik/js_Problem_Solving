@@ -1,5 +1,4 @@
 function transposeMatrix(inputArray){
-    
     const numOfRows = inputArray.length;
     const numOfCols = inputArray[0].length;
 
@@ -7,7 +6,7 @@ function transposeMatrix(inputArray){
 
     for(let i = 0; i < numOfRows; i++){
         for(let j = 0; j < numOfCols; j++){
-            console.log(inputArray [i][j]);
+ //           console.log(inputArray [i][j]);
             if(!result[j]){
                 result [j] = [];
             }
