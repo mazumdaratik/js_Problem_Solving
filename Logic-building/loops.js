@@ -24,16 +24,26 @@
 //     }
 //     console.log(row); 
 // }
-let n = 3;
-let count = 1;
-for(let i = 1; i <= n; i++){
-    let row = ''; 
-    for(let j = 1; j <= n; j++){
-        row = row + count + " ";
-        count ++;
+// let n = 3;
+// let count = 1;
+// for(let i = 1; i <= n; i++){
+//     let row = ''; 
+//     for(let j = 1; j <= n; j++){
+//         row = row + count + " ";
+//         count ++;
+//     }
+//     console.log(row); 
+// }
+
+let n = 4; // Number of rows
+for (let i = 1; i <= n; i++) {
+    let row = ""; // Initialize an empty string for each row
+    for (let j = 1; j <= i; j++) {
+        row += "* "; // Append "* " for each column in the current row
     }
-    console.log(row); 
+    console.log(row); // Print the row after trimming the trailing space
 }
+
 
 
 
