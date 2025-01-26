@@ -35,15 +35,39 @@
 //     console.log(row); 
 // }
 
-let n = 4; // Number of rows
-for (let i = 1; i <= n; i++) {
-    let row = ""; // Initialize an empty string for each row
-    for (let j = 1; j <= i; j++) {
-        row += "* "; // Append "* " for each column in the current row
+// let n = 4; 
+// for (let i = 1; i <= n; i++) {
+//     let row = ""; 
+//     for (let j = 1; j <= i; j++) {
+//         row += "* "; 
+//     }
+//     console.log(row); 
+// }
+
+
+// let n = 100;
+// for(let i = 1; i <= n; i = i+10){
+// let row = "";
+// for(let j = i; j < i+10; j++){
+//     row = row + j + " ";
+// }
+// console.log(row,"\n");
+// }
+
+// let n = 4;
+// for(i = 0; i < n; i++){
+//     let row = "";
+//     for(j = 0; j < i+ 1; j ++){
+//         row += i + 1 + " ";
+//     }
+//     console.log(row,"\n");
+// }
+
+let n = 5;
+for(let i = 0; i < 5; i++){
+    let row = "";
+    for(let j = 1; j <= i; j++){
+        row += j + " ";
     }
-    console.log(row); // Print the row after trimming the trailing space
+    console.log(row, "\n");
 }
-
-
-
-
