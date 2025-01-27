@@ -63,11 +63,32 @@
 //     console.log(row,"\n");
 // }
 
-let n = 5;
-for(let i = 0; i < 5; i++){
+// let n = 5;
+// for(let i = 0; i < 5; i++){
+//     let row = "";
+//     for(let j = 1; j <= i; j++){
+//         row += j + " ";
+//     }
+//     console.log(row, "\n");
+// }
+
+// let n = 4;
+
+// for(let i = 0; i < n ; i++){
+//     let row = "";
+//    for(let j = i+1; j > 0; j--){
+//     row = row + j + " ";
+//    }
+//     console.log(row, "\n");
+// }
+
+let n = 4;
+let num = 1;
+for(let i = 0; i < n; i++){
     let row = "";
-    for(let j = 1; j <= i; j++){
-        row += j + " ";
+    for(let j = i+1; j > 0; j--){
+        row += num + "  ";
+        num ++;
     }
-    console.log(row, "\n");
+    console.log(row, "\n")
 }
