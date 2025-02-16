@@ -151,7 +151,18 @@ console.log(allSkills);
 const engineeringEmployees = employees.filter(emp => emp.departmentId === departments.id);
 console.log("Total salary of Engineering department:", totalSalary);
 //  T-040: Check if there is any department where all employees earn more than 5000.
+// Check if any department has all employees earning more than 5000
+  const departmentWithHighSalaries = departments.find(dept => {
+  const deptEmployees = employees.filter(emp => emp.departmentId === dept.id);
+  return deptEmployees.length > 0 && deptEmployees.every(emp => emp.salary > 5000);
+});
 
+// Print the department if found
+if (departmentWithHighSalaries) {
+  console.log("Department where all employees earn more than 5000:", departmentWithHighSalaries.name);
+} else {
+  console.log("No department found where all employees earn more than 5000.");
+}
 //  T-041: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }). Find the total number of unique projects being handled across all employees.
 
 //  T-042: For each employee, find their department name and return an array of employee names with their department names.
