@@ -1,15 +1,15 @@
-// const employees = [
-//     { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
-//     { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
-//     { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
-//     { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
-//     { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
-//     { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
-//     { id: 7, name: "George", departmentId: 3, salary: 5200 },
-//     { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
-//     { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
-//     { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
-//   ];
+const employees = [
+    { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+    { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+    { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+    { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+    { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+    { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+    { id: 7, name: "George", departmentId: 3, salary: 5200 },
+    { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+    { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+    { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+  ];
 
 const departments = [
     { id: 1, name: "HR" },
@@ -129,18 +129,18 @@ const updatedEmployees = employees.map(employee => ({
 
 //  T-038: Assume each employee can have multiple skills. Create an array of employee skills and flatten them. Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
 
-const employees = [
-  { id: 1, name: "Alice", departmentId: 1, salary: 5000, skills: ["Excel", "Management"] },
-  { id: 2, name: "Bob", departmentId: 2, salary: 7000, skills: ["JavaScript", "React"] },
-  { id: 3, name: "Charlie", departmentId: 3, salary: 4500, skills: ["SEO", "Content Writing"] },
-  { id: 4, name: "Diana", departmentId: 1, salary: 5500, skills: ["Recruiting", "Communication"] },
-  { id: 5, name: "Edward", departmentId: 2, salary: 8000, skills: ["Python", "Django"] },
-  { id: 6, name: "Fiona", departmentId: 4, salary: 6000, skills: ["Salesforce", "Negotiation"] },
-  { id: 7, name: "George", departmentId: 3, salary: 5200, skills: ["Marketing", "Branding"] },
-  { id: 8, name: "Helen", departmentId: 4, salary: 7200, skills: ["Presentation", "Analytics"] },
-  { id: 9, name: "Ian", departmentId: 2, salary: 4800, skills: ["Java", "Spring Boot"] },
-  { id: 10, name: "Jane", departmentId: 1, salary: 5100, skills: ["HR Policies", "Conflict Resolution"] },
-];
+// const employees = [
+//   { id: 1, name: "Alice", departmentId: 1, salary: 5000, skills: ["Excel", "Management"] },
+//   { id: 2, name: "Bob", departmentId: 2, salary: 7000, skills: ["JavaScript", "React"] },
+//   { id: 3, name: "Charlie", departmentId: 3, salary: 4500, skills: ["SEO", "Content Writing"] },
+//   { id: 4, name: "Diana", departmentId: 1, salary: 5500, skills: ["Recruiting", "Communication"] },
+//   { id: 5, name: "Edward", departmentId: 2, salary: 8000, skills: ["Python", "Django"] },
+//   { id: 6, name: "Fiona", departmentId: 4, salary: 6000, skills: ["Salesforce", "Negotiation"] },
+//   { id: 7, name: "George", departmentId: 3, salary: 5200, skills: ["Marketing", "Branding"] },
+//   { id: 8, name: "Helen", departmentId: 4, salary: 7200, skills: ["Presentation", "Analytics"] },
+//   { id: 9, name: "Ian", departmentId: 2, salary: 4800, skills: ["Java", "Spring Boot"] },
+//   { id: 10, name: "Jane", departmentId: 1, salary: 5100, skills: ["HR Policies", "Conflict Resolution"] },
+// ];
 
 const allSkills = employees.flatMap(employee => employee.skills);
 
@@ -148,7 +148,8 @@ console.log(allSkills);
 
 
 //  T-039: Find the total salary of all employees working in the "Engineering" department.
-
+const engineeringEmployees = employees.filter(emp => emp.departmentId === departments.id);
+console.log("Total salary of Engineering department:", totalSalary);
 //  T-040: Check if there is any department where all employees earn more than 5000.
 
 //  T-041: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }). Find the total number of unique projects being handled across all employees.
