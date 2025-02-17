@@ -1,15 +1,15 @@
-const employees = [
-    { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
-    { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
-    { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
-    { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
-    { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
-    { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
-    { id: 7, name: "George", departmentId: 3, salary: 5200 },
-    { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
-    { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
-    { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
-  ];
+// const employees = [
+//     { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+//     { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+//     { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+//     { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+//     { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+//     { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+//     { id: 7, name: "George", departmentId: 3, salary: 5200 },
+//     { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+//     { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+//     { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+//   ];
 
 const departments = [
     { id: 1, name: "HR" },
@@ -164,6 +164,26 @@ if (departmentWithHighSalaries) {
   console.log("No department found where all employees earn more than 5000.");
 }
 //  T-041: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }). Find the total number of unique projects being handled across all employees.
+const employees = [
+  { id: 1, name: "Alice", projects: ["Project A", "Project B"] },
+  { id: 2, name: "Bob", projects: ["Project B", "Project C"] },
+  { id: 3, name: "Charlie", projects: ["Project A", "Project D"] },
+  { id: 4, name: "Diana", projects: ["Project C", "Project E"] },
+  { id: 5, name: "Edward", projects: ["Project A", "Project F"] },
+  { id: 6, name: "Fiona", projects: ["Project D", "Project F"] }
+];
+
+// Extract all projects into a single array
+const allProjects = employees.flatMap(emp => emp.projects);
+
+// Remove duplicates using a Set
+const uniqueProjects = new Set(allProjects);
+
+// Get the total number of unique projects
+const totalUniqueProjects = uniqueProjects.size;
+
+console.log("Total number of unique projects:", totalUniqueProjects);
+console.log("Unique projects:", [...uniqueProjects]); // Optional: Print all unique projects
 
 //  T-042: For each employee, find their department name and return an array of employee names with their department names.
 
