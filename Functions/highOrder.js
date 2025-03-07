@@ -23,3 +23,11 @@ for(let i = 0; i < numbers.length; i++) {
     results.push(numbers[i]*2);
 }
 console.log(results);
+
+let nums = [1, 2, 3, 4];
+
+let result = nums.map( function(num){
+    return num * 2;
+})
+
+console.log(result);
