@@ -18,3 +18,9 @@ function reString(str){
   return final;
 }
 console.log(reString('atik Mazumdar'));
+
+function reverseAstring(inputString){
+  console.log(inputString[0]);
+}
+
+reverseAstring("atik")

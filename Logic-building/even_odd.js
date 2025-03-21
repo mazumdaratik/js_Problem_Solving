@@ -10,3 +10,21 @@ let EvenOdd = function(number){
     } 
 }
 console.log(EvenOdd(5));
+
+function evenOdds(num){
+    let remainder = num % 2 ;
+    if(remainder === 0) {
+        return "Even"
+    } else if (remainder !== 0){
+        return "Odds"
+    } else {
+        console.log("Not a valid check");
+    }
+}
+console.log(evenOdds(5));
+
+function evenodd(num){
+        return num % 2 === 0 ? "even" : "odd";
+}
+
+console.log(evenodd(5));
