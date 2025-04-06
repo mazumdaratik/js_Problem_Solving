@@ -53,3 +53,20 @@ function fib(n){
     return arr;
 }
 console.log(fib(5));
+
+function isPalindromicInteger(num) {
+    function reverse(n, rev = 0) {
+        if (n === 0) return rev;
+        return reverse(Math.floor(n / 10), rev * 10 + (n % 10));
+    }
+
+    if (num < 0) return false; 
+
+    return num === reverse(num);
+}
+
+
+console.log(isPalindromicInteger(12321));  
+console.log(isPalindromicInteger(123));    
+
+
