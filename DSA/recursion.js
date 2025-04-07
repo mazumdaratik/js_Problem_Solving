@@ -54,6 +54,13 @@ function fib(n){
 }
 console.log(fib(5));
 
+function recursiveFibonacci(n){
+    if(n <= 1) return n;
+    return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+}
+
+console.log(recursiveFibonacci(5))
+
 function isPalindromicInteger(num) {
     function reverse(n, rev = 0) {
         if (n === 0) return rev;
