@@ -45,7 +45,7 @@ return arr;
 }
 console.log(rangOfNumbers(0, 5)); */
 
-function fib(n){
+/* function fib(n){
     let arr = [0, 1];
     for(let i = 2; i <= n; i++){
         arr.push(arr[i-2] + arr[i -1])
@@ -74,6 +74,14 @@ function isPalindromicInteger(num) {
 
 
 console.log(isPalindromicInteger(12321));  
-console.log(isPalindromicInteger(123));    
+console.log(isPalindromicInteger(123));  */ 
+
+function reverseStr(str){
+    if(str === ''){
+        return '';
+    } else return reverseStr(str.substr(1)) + str.charAt(0);
+    
+}
+console.log(reverseStr('atik'))
 
 
