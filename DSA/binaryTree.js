@@ -81,8 +81,32 @@ class BinaryTree {
         }
       }
     }
-    
-}
+    preOrder(node = this.root) {
+      if (node) {
+        console.log(node.value);
+        this.preOrder(node.left);
+        this.preOrder(node.right);
+      }
+    }
+  
+    inOrder(node = this.root) {
+      if (node) {
+        this.inOrder(node.left);
+        console.log(node.value);
+        this.inOrder(node.right);
+      }
+    }
+  
+    postOrder(node = this.root) {
+      if (node) {
+        this.postOrder(node.left);
+        this.postOrder(node.right);
+        console.log(node.value);
+      }
+    }
+  }
+
+
 const binaryTree = new BinaryTree();
 binaryTree.add(10);
 binaryTree.add(20);
@@ -94,3 +118,12 @@ console.log("Finding 80", binaryTree.search(40));
 
 console.log("Level order");
 binaryTree.levelOrder();
+
+console.log("Pre order");
+binaryTree.preOrder();
+
+console.log("In order");
+binaryTree.inOrder();
+
+console.log("Post order");
+binaryTree.postOrder();
