@@ -60,7 +60,27 @@ class BinaryTree {
         }
     
         return false;
+    }
+
+    levelOrder() {
+      if (!this.root) {
+        return;
       }
+  
+      const queue = [this.root];
+      while (queue.length > 0) {
+        const current = queue.shift();
+        console.log(current.value);
+  
+        if (current.left) {
+          queue.push(current.left);
+        }
+  
+        if (current.right) {
+          queue.push(current.right);
+        }
+      }
+    }
     
 }
 const binaryTree = new BinaryTree();
@@ -71,3 +91,6 @@ binaryTree.add(40);
 binaryTree.add(50);
 
 console.log("Finding 80", binaryTree.search(40));
+
+console.log("Level order");
+binaryTree.levelOrder();
