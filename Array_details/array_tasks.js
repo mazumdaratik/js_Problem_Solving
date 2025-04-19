@@ -187,6 +187,18 @@ console.log("Unique projects:", [...uniqueProjects]); // Optional: Print all uni
 
 //  T-042: For each employee, find their department name and return an array of employee names with their department names.
 
+
+const result = employees.map(emp => {
+  const dept = departments.find(d => d.id === emp.departmentId);
+  return {
+    employee: emp.name,
+    department: dept ? dept.name : "Unknown"
+  };
+});
+
+console.log(result);
+
+
 //  T-043: Get a list of names of employees earning more than 6000.
 
 //  T-044: Write a for-of loop to print the names of all employees from the employees array.
