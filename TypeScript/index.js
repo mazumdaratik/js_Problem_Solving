@@ -51,3 +51,10 @@ console.log(users);
 for (var key in users) {
     console.log(users[key]);
 }
+var getRequest;
+getRequest = "GET";
+console.log(getRequest);
+function requestHandler(requestType) {
+    console.log(requestType);
+}
+requestHandler("POST");

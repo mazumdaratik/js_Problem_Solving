@@ -44,14 +44,19 @@ userName = "atik"
 userName = true
 userName = 123456
 
-let users: object[];
+/* let users: object[];
+users = []; */
+
+type User = {userName: string, userId: number};
+
+let users: User[];
 users = [];
 
-let user1: {userName: string, userId: number};
+let user1: User;
 user1 = {userName: "Atik", userId: 101};
 users.push(user1);
 
-let user2: {userName: string, userId: number};
+let user2: User;
 user2 = {userName: "samiul", userId: 102};
 users.push(user2);
 console.log(users);
@@ -59,3 +64,14 @@ console.log(users);
 for (const key in users) {
     console.log(users[key]);
 }
+
+type RequestType = "GET" | "POST"
+
+let getRequest: RequestType;
+getRequest = "GET";
+console.log(getRequest);
+
+function requestHandler(requestType:RequestType){
+    console.log(requestType);
+}
+requestHandler("POST");
