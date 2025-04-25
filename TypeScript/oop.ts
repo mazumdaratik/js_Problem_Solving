@@ -1,4 +1,4 @@
-class Person {
+ abstract class Person {
     userName: string;
     age: number;
     
@@ -7,9 +7,10 @@ class Person {
         this.age = age;
     }
 
-    display():void{
-        console.log(`username: ${this.userName} and age: ${this.age}`);
-    }
+    // display():void{
+    //     console.log(`username: ${this.userName} and age: ${this.age}`);
+    // }
+   abstract  display():void;
 }
 
 // let person1 = new Person("Atik", 25);
@@ -25,6 +26,10 @@ class Details extends Person{
         this.age = age;
         this.personId = personId;
     }
+
+     display():void{
+         console.log(`username: ${this.userName} and age: ${this.age}`);
+     }
 }
 
 let person1 = new Details('Atik', 24, 101)

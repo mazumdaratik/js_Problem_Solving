@@ -18,9 +18,6 @@ var Person = /** @class */ (function () {
         this.userName = userName;
         this.age = age;
     }
-    Person.prototype.display = function () {
-        console.log("username: ".concat(this.userName, " and age: ").concat(this.age));
-    };
     return Person;
 }());
 // let person1 = new Person("Atik", 25);
@@ -36,6 +33,9 @@ var Details = /** @class */ (function (_super) {
         _this.personId = personId;
         return _this;
     }
+    Details.prototype.display = function () {
+        console.log("username: ".concat(this.userName, " and age: ").concat(this.age));
+    };
     return Details;
 }(Person));
 var person1 = new Details('Atik', 24, 101);
