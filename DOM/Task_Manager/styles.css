@@ -1,0 +1,11 @@
+*{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.btn{
+    border-radius: 5px;
+    border: 1px solid rgb(86, 86, 94);
+}
+li.complete{
+    text-decoration: line-through;
+}
